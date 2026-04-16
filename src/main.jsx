@@ -17,6 +17,7 @@ const router = createBrowserRouter([
       {
         path:"/home",
         Component : Homepage,
+        loader:()=>fetch("/friends.json")
       },
       {
         path:"/timeline",
