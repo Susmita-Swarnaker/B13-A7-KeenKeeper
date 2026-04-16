@@ -1,4 +1,6 @@
 import React from 'react';
+import { RiHome2Line, RiTimeLine } from 'react-icons/ri';
+import { TfiStatsUp } from 'react-icons/tfi';
 import { NavLink } from 'react-router';
 
 const Navbar = () => {
@@ -9,9 +11,19 @@ const Navbar = () => {
     </div>
     <div>
          <ul className='flex gap-2'>
-            <li><NavLink to={"/home"}>Home</NavLink></li>
-            <li><NavLink to={"/timeline"}>Timeline</NavLink></li>
-            <li><NavLink to={"/stats"}>Stats</NavLink></li>
+           <li>
+  <NavLink
+    to={"/home"} className={({isActive}) =>`flex font-semibold justify-center items-center py-1 px-2 rounded-lg ${isActive?"bg-green-950 border text-white" : ""}`}
+      
+  
+   
+  >
+    <RiHome2Line /> Home
+  </NavLink>
+</li>
+            <li><NavLink to={"/timeline"} className={({isActive}) =>`flex justify-between items-center gap-1 px-2 py-1 rounded-lg ${isActive?"bg-green-950 border text-white" : ""}`}><RiTimeLine /> Timeline</NavLink></li>
+            <li><NavLink to={"/stats"} className={({isActive}) =>`flex justify-between items-center gap-1 px-2 py-1 rounded-lg ${isActive?"bg-green-950 border text-white" : ""}`}><TfiStatsUp />Stats</NavLink></li>
+            
             
             
          </ul>

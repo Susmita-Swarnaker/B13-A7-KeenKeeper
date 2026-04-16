@@ -48,7 +48,7 @@ relationships that matter most.</p>
                  
             </div>
 
-             <hr className='mt-4 text-gray-300 mb-10' />
+             <hr className='mt-4 text-gray-300 ' />
 
             
         </div>
